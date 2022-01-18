@@ -41,7 +41,7 @@ class Bot2Spider(scrapy.Spider):
                 titles[index], companies[index], locations[index], exp[index], salary[index], description[index]
             ])
         
-        with open('JobData.csv', mode='w', newline='', encoding='utf-8')as f:
+        with open('JobData.csv', mode='a', newline='', encoding='utf-8')as f:
             writer = csv.writer(f)
             writer.writerow(['Title', 'Companie', 'Location', 
                             'Exeprience', 'Salary', 'Description'])
